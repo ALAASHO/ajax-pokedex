@@ -14,7 +14,11 @@ document.getElementById("btn-search").addEventListener("click", function () {
         })
 
         .then(data => {
-            console.log(data)
+            console.log(data);
+            console.log(data.sprites.front_default);
+            pokeImgSrc = data.sprites.front_default;
+            document.getElementById("img-pokemon").src = pokeImgSrc;
+
         })
         .catch(function (error) { // for the invalid input (fail to fetch)
             alert(error);
