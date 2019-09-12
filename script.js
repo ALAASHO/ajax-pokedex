@@ -14,7 +14,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
         })
 
         .then(data => {
-            console.log(data);
+            console.log("original data", data);
 
             let pokeImgSrc = data.sprites.front_default;
             let pokeId = data.id;
