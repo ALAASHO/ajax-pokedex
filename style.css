@@ -1,6 +1,77 @@
 
+body{
+background-color: #ff932b;
+
+}
 
 header , footer {
     background-color: red;
 
+}
+
+footer {
+
+    padding-top: 0;
+    border-top: 1px solid #e7e7e7;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 0;
+}
+
+h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 19px;
+    padding: 30px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+.title {
+    color: yellow;
+    background-color: red;
+    letter-spacing: .15em;
+    text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392;;
+}
+
+.searchbar{
+    margin-left: auto;
+    margin-top: -77px;
+    height: 60px;
+    background-color: #dec200;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+}
+
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
 }

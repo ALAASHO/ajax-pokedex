@@ -7,12 +7,25 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="http://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Pokedex_tool-512.png">
+
 </head>
 <body>
 
 <header>
-    <h1>PoKedex</h1>
-    <input id="user-input" type="text" placeholder="pokemon name/id"><button id="btn-search">Search</button>
+    <h1 class="title"> Pokémon </h1>
+
+
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                <input id="user-input" class="search_input" type="text" name="" placeholder="Search...">
+                <a href="#" id="btn-search" class="search_icon"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+    </div>
+
+
 </header>
 <main class="container">
     <section class="row">
@@ -26,7 +39,8 @@
                 <li id="id-nr">ID-number</li>
                 <li id="name">name</li>
                 <li id="moves">moves</li>
-                <li>evolution</li>
+                <li id="prev-name">evolution</li>
+                <li><img id="prev-img" src="" alt=""></li>
             </ul>
         </section>
     </section>
@@ -44,8 +58,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<!--<script src="alaa.js"></script>-->
 <script src="script.js"></script>
-<script src="alaa.js"></script>
-<script src="bona.js"></script>
+
 </body>
 </html>
