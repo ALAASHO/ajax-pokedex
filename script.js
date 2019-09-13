@@ -1,3 +1,24 @@
+function getNextImage(sprites){
+    let gallery = [];
+
+    for (let key in sprites)
+        if(sprites[key] !== null)
+        gallery.push(sprites[key]);
+    // console.log("gallery", gallery);
+
+    let carousel = document.getElementById("img-pokemon");
+
+    let srcIndex = gallery.indexOf(carousel.src);
+    // console.log(srcIndex+ " " + typeof(srcIndex));
+
+    if(srcIndex === gallery.length-1) { // If the cur src is the last one in the array
+        srcIndex = 0;                   // set the index with 0 (to go to the first img°
+    } else {                            // otherwise
+        srcIndex ++
+    }
+    carousel.src = gallery[srcIndex];
+}
+
 document.getElementById("btn-search").addEventListener("click", function () {
 
     // Take input(pokemon name in lowercase /id)
@@ -16,8 +37,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
 
         .then(data => {
             console.log("original data", data);
+            var arrayData = Array.from(data);
 
-            const pokeImgSrc = data.sprites.front_default;
+            let pokeImgSrc = data.sprites.front_default;
             const pokeMoves = [];
             const numMoves = 4;
             for(let i=0; i<numMoves; i++){
@@ -25,7 +47,6 @@ document.getElementById("btn-search").addEventListener("click", function () {
             }
 
             // console.log("pokeImgSrc", data.sprites.front_default);
-
             document.getElementById("img-pokemon").src = pokeImgSrc;
             document.getElementById("id-nr").innerHTML = data.id;
             document.getElementById("name").innerHTML = data.name;
@@ -35,6 +56,12 @@ document.getElementById("btn-search").addEventListener("click", function () {
             document.querySelectorAll(".blueButton").forEach(function(item, i){
                item.innerHTML = pokeMoves[i];
             });
+            document.getElementById("bigbluebutton").innerHTML = "photo";
+
+            document.getElementById("bigbluebutton").addEventListener("click", function () {
+                getNextImage(data.sprites);
+            });
+
             // console.log("url for 2nd Fetch : ", data.species.url);
             return fetch(data.species.url)
         })
