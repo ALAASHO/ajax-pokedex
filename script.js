@@ -15,11 +15,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
         })
 
         .then(data => {
-            // console.log("original data", data);
+            console.log("original data", data);
 
             const pokeImgSrc = data.sprites.front_default;
-            const pokeId = data.id;
-            const pokeName = data.name;
             const pokeMoves = [];
             const numMoves = 4;
             for(let i=0; i<numMoves; i++){
@@ -27,15 +25,13 @@ document.getElementById("btn-search").addEventListener("click", function () {
             }
 
             // console.log("pokeImgSrc", data.sprites.front_default);
-            // console.log("pokeId", pokeId);
-            // console.log("pokeName", pokeName);
-            // console.log("pokeMoves", pokeMoves);
 
             document.getElementById("img-pokemon").src = pokeImgSrc;
-            document.getElementById("id-nr").innerHTML = pokeId;
-            document.getElementById("name").innerHTML = pokeName;
-            console.log(Array.from(document.querySelectorAll(".blueButton")));
-
+            document.getElementById("id-nr").innerHTML = data.id;
+            document.getElementById("name").innerHTML = data.name;
+            document.getElementById("type").innerHTML = data.types[0].type.name;
+            document.getElementById("height").innerHTML = data.height +"0 cm";
+            document.getElementById("weight").innerHTML = data.weight +" kg";
             document.querySelectorAll(".blueButton").forEach(function(item, i){
                item.innerHTML = pokeMoves[i];
             });
@@ -60,7 +56,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
 
             // if it has no prev-evolution,
             if (prev_evolution === null) {
-                document.getElementById("yellowBox1").innerHTML = "none"
+                document.getElementById("yellowBox1").innerHTML = "no previous evolution"
             } else {    // if it has prev-evolution
                 // console.log("previous evolution name : ", prev_evolution.name);
                 // console.log("url for previous evolution : ", prev_evolution.url); // later use for link to previous evolution one
