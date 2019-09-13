@@ -9,6 +9,15 @@ header, footer {
 
 }
 
+#prev-img {
+    position: relative;
+
+
+}
+
+
+
+
 footer {
 
     padding-top: 0;
@@ -21,7 +30,7 @@ footer {
 h1 {
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 19px;
-    padding: 30px 20px;
+    /*padding: 30px 20px;*/
     text-align: left;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
@@ -32,16 +41,16 @@ h1 {
     color: yellow;
     /*background-color: red;*/
     letter-spacing: .15em;
-    text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585, -8px 16px 1px #8b8a89, -9px 18px 1px #8f8e8d, -10px 20px 1px #949392;;
-    margin-left: 55px;
+    text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d, -6px 12px 1px #828181, -7px 14px 1px #868585 ;
+    margin-left: 230px;
     float: right;
 }
 
-.list-unstyled
-{
+.list-unstyled {
     flex: auto;
 
 }
+
 #img-span {
     position: relative;
     margin-top: 0;
@@ -49,21 +58,22 @@ h1 {
 }
 
 .container {
-  position: fixed;
+    position: absolute;
+    z-index: auto;
 
 }
 
 .searchbar {
     margin-left: auto;
-    margin-top: -77px;
+    margin-top: -10px;
     height: 60px;
-    background-color: #dec200;
+    background-color: #ffff00;
     border-radius: 30px;
     padding: 10px;
 }
 
 .search_input {
-    color: white;
+    color: #8b0000;
     border: 0;
     outline: 0;
     background: none;
@@ -935,7 +945,15 @@ h1 {
         background: -o-radial-gradient(#0abd0a, #057b05);
     }
 
+
+    #prev-name {
+        margin: 0;
+        padding: auto;
+        position: center;
+    }
+
     div#yellowBox1 {
+        text-align:center; bottom: 0; margin: 0 auto;
         width: 140px;
         height: 70px;
         z-index: 1;
@@ -957,12 +975,13 @@ h1 {
     }
 
     div#yellowBox2 {
+        text-align:center; position:absolute; bottom: 0; margin: 0 auto;
         width: 140px;
         height: 70px;
         z-index: 1;
         background-color: #ffff00;
 
-        position: absolute;
+
         top: 415px;
         left: 185px;
 
