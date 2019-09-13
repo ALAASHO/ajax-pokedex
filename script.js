@@ -31,9 +31,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
             // console.log("pokeMoves", pokeMoves);
 
             document.getElementById("img-pokemon").src = pokeImgSrc;
-            document.getElementById("id-nr").innerHTML = pokeId;
-            document.getElementById("name").innerHTML = pokeName;
-            document.getElementById("moves").innerHTML = pokeMoves;
+            document.getElementById("id-nr").innerHTML = "ID : " + pokeId;
+            document.getElementById("name").innerHTML = "NAME : " + pokeName;
+            document.getElementById("moves").innerHTML = "MOVES : " + pokeMoves;
 
 
             console.log("url for 2nd Fetch : ", data.species.url);
@@ -54,10 +54,10 @@ document.getElementById("btn-search").addEventListener("click", function () {
 
             let prev_evolution = data.evolves_from_species; // null if there is no prev
 
-            console.log("prev_evolution", prev_evolution);
-            if (prev_evoluation == undefined) {
-                console.log("no previous evolution for this pokemon")
-            }
+            // console.log("prev_evolution", prev_evolution);
+            // if (prev_evoluation == undefined) {
+            //     console.log("no previous evolution for this pokemon")
+            // }
 
             console.log("previous evolution : ", prev_evolution);
             console.log("previous evolution name : ", prev_evolution.name);
@@ -67,6 +67,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
             console.log("prev_url", prev_url);
             let prev_id = prev_url[prev_url.length-2];
             console.log("prev_id", prev_id);
+
+            document.getElementById("prev-name").innerHTML = prev_evolution.name;
+
 
             console.log("url for 3rd Fetch : ", "https://pokeapi.co/api/v2/pokemon/"+prev_id);
             return fetch("https://pokeapi.co/api/v2/pokemon/"+prev_id)
@@ -85,7 +88,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
             console.log(data);
 
             let prevEvoImgSrc = data.sprites.front_default;
-            console.log(prevEvoImgSrc)
+            console.log(prevEvoImgSrc);
+            document.getElementById("prev-img").src = prevEvoImgSrc;
+
         })
 
         .catch(function (error) { // for the invalid input (fail to fetch)
