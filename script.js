@@ -36,7 +36,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
         })
 
         .then(data => {
-            console.log("original data", data);
+            // console.log("original data", data);
             var arrayData = Array.from(data);
 
             let pokeImgSrc = data.sprites.front_default;
@@ -56,7 +56,6 @@ document.getElementById("btn-search").addEventListener("click", function () {
             document.querySelectorAll(".blueButton").forEach(function(item, i){
                item.innerHTML = pokeMoves[i];
             });
-            document.getElementById("bigbluebutton").innerHTML = "photo";
 
             document.getElementById("bigbluebutton").addEventListener("click", function () {
                 getNextImage(data.sprites);
@@ -83,7 +82,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
 
             // if it has no prev-evolution,
             if (prev_evolution === null) {
-                document.getElementById("yellowBox1").innerHTML = "no previous evolution"
+                document.getElementById("yellowBox1").innerHTML = "no previous evolution";
+                document.getElementById("yellowBox2").innerHTML = "";
+
             } else {    // if it has prev-evolution
                 // console.log("previous evolution name : ", prev_evolution.name);
                 // console.log("url for previous evolution : ", prev_evolution.url); // later use for link to previous evolution one
