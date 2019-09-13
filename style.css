@@ -37,6 +37,12 @@ h1 {
     float: right;
 }
 
+#img-span {
+    position: absolute;
+    margin-: 0 auto;
+    padding: auto;
+
+}
 
 .container {
   position: fixed;
