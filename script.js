@@ -83,8 +83,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
             // if it has no prev-evolution,
             if (prev_evolution === null) {
                 document.getElementById("yellowBox1").innerHTML = "no previous evolution";
-                document.getElementById("yellowBox2").innerHTML = "";
-
+                document.getElementById("prev-img").src = "assets/razz-berry.png";
             } else {    // if it has prev-evolution
                 // console.log("previous evolution name : ", prev_evolution.name);
                 // console.log("url for previous evolution : ", prev_evolution.url); // later use for link to previous evolution one
