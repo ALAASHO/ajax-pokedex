@@ -31,9 +31,9 @@ document.getElementById("btn-search").addEventListener("click", function () {
             // console.log("pokeMoves", pokeMoves);
 
             document.getElementById("img-pokemon").src = pokeImgSrc;
-            document.getElementById("id-nr").innerHTML = "ID : " + pokeId;
-            document.getElementById("name").innerHTML = "NAME : " + pokeName;
-            document.getElementById("moves").innerHTML = "MOVES : " + pokeMoves;
+            document.getElementById("id-nr").innerHTML = pokeId;
+            document.getElementById("name").innerHTML = pokeName;
+            document.getElementById("moves").innerHTML = pokeMoves;
 
 
             console.log("url for 2nd Fetch : ", data.species.url);
@@ -68,7 +68,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
             let prev_id = prev_url[prev_url.length-2];
             console.log("prev_id", prev_id);
 
-            document.getElementById("prev-name").innerHTML = "Evolves from : " + prev_evolution.name;
+            document.getElementById("prev-name").innerHTML = prev_evolution.name;
 
 
             console.log("url for 3rd Fetch : ", "https://pokeapi.co/api/v2/pokemon/"+prev_id);
