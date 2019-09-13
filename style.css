@@ -37,11 +37,15 @@ h1 {
     float: right;
 }
 
-#img-span {
-    position: absolute;
-    margin-: 0 auto;
-    padding: auto;
+.list-unstyled
+{
+    flex: auto;
 
+}
+#img-span {
+    position: relative;
+    margin-top: 0;
+    padding: auto;
 }
 
 .container {
@@ -808,7 +812,7 @@ h1 {
 
     div.blueButton {
         height: 35px;
-        width: 45px;
+        width: 112px;
         background-color: #003300;
         float: left;
         margin-right: 7px;
