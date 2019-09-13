@@ -5,52 +5,135 @@
     <title>Pokedex</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="http://cdn0.iconfinder.com/data/icons/pokemon-go-vol-2/135/_Pokedex_tool-512.png">
 
+
 </head>
 <body>
 
-<header>
-    <h1 class="title"> Pokémon </h1>
+<div id="pokedex">
+    <div id="left">
+        <div id="logo"></div>
+        <div id="bg_curve1_left">
+
+            <div class="container h-100">
+                <div class="d-flex justify-content-center h-100">
+                    <div class="searchbar">
+                        <input id="user-input" class="search_input" type="text" name="" placeholder="Search...">
+                        <a href="#" id="btn-search" class="search_icon"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="bg_curve2_left"></div>
+        <div id="curve1_left">
+            <div id="buttonGlass">
+                <div id="reflect"> </div>
+            </div>
+
+            <div id="miniButtonGlass1"></div>
+            <div id="miniButtonGlass2"></div>
+            <div id="miniButtonGlass3"></div>
 
 
-    <div class="container h-100">
-        <div class="d-flex justify-content-center h-100">
-            <div class="searchbar">
-                <input id="user-input" class="search_input" type="text" name="" placeholder="Search...">
-                <a href="#" id="btn-search" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
+        <div id="curve2_left">
+            <div id="junction">
+                <div id="junction1"></div>
+                <div id="junction2">
+
+                </div>
+            </div>
+        </div>
+        <div id="screen">
+            <div id="topPicture">
+                <div id="buttontopPicture1"></div>
+                <div id="buttontopPicture2"></div>
+            </div>
+            <div id="picture">
+                <img id="img-pokemon" src="https://assets.pokemon.com/assets/cms2/img/misc/countries/be/country_detail_pokemon.png" alt="psykokwak" height="160" width="235" />
+            </div>
+            <div id="buttonbottomPicture"></div>
+            <div id="speakers">
+                <div class="sp"></div>
+                <div class="sp"></div>
+                <div class="sp"></div>
+                <div class="sp"></div>
+            </div>
+        </div>
+        <div id="bigbluebutton"></div>
+        <div id="barbutton1"></div>
+        <div id="barbutton2"></div>
+        <div id="cross">
+            <div id="leftcross">
+                <div id="leftT"></div>
+            </div>
+            <div id="topcross">
+                <div id="upT"></div>
+            </div>
+            <div id="rightcross">
+                <div id="rightT"></div>
+            </div>
+            <div id="midcross">
+                <div id="midCircle"></div>
+            </div>
+            <div id="botcross">
+                <div id="downT"></div>
             </div>
         </div>
     </div>
+    <div id="right">
 
 
-</header>
-<main class="container">
-    <section class="row">
-        <!--the Section for photo-->
-        <section class="col-6">
-            <img id="img-pokemon" src="https://via.placeholder.com/300" alt="">
-        </section>
-        <!--the Section for information-->
-        <section class="col-6">
-            <ul class="list-unstyled">
-                <li>ID-number: <span id="id-nr"></span></li>
-                <li>Name: <span id="name"></span></li>
-                <li>Moves: <span id="moves"></span></li>
-                <li>
-                    Evolves from: <span id="prev-name"></span><br>
-                    <img id="prev-img" src="" alt="">
-                </li>
+        <div id="stats">
 
-            </ul>
-        </section>
-    </section>
-</main>
-<footer>
-    <p>This is footer</p>
-</footer>
+
+            <section class="col-6">
+                <ul class="list-unstyled">
+                    <li>ID-number: <span id="id-nr"></span></li>
+                    <li>Name: <span id="name"></span></li>
+                    <li>Moves: <span id="moves"></span></li>
+                    <li>
+                        Evolves from: <span id="prev-name"></span><br>
+                        <img id="prev-img" src="" alt="">
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+        <div id="blueButtons1">
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+        </div>
+        <div id="blueButtons2">
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+            <div class="blueButton"></div>
+        </div>
+        <div id="miniButtonGlass4"></div>
+        <div id="miniButtonGlass5"></div>
+        <div id="barbutton3"></div>
+        <div id="barbutton4"></div>
+        <div id="yellowBox1"></div>
+        <div id="yellowBox2"></div>
+        <div id="bg_curve1_right"></div>
+        <div id="bg_curve2_right"></div>
+        <div id="curve1_right"></div>
+        <div id="curve2_right"><h1 class="title"> Pokémon </h1></div>
+
+    </div>
+
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -61,7 +144,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<!--<script src="alaa.js"></script>-->
+
 <script src="script.js"></script>
 
 </body>
