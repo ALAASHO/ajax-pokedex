@@ -85,7 +85,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
                         // console.log(data);
                         let prevPokeImgSrc = data.sprites.front_default;
                         // console.log(prevPokeEvoImgSrc);
-                        document.getElementById("prev-img").src = prevPokeEvoImgSrc;
+                        document.getElementById("prev-img").src = prevPokeImgSrc;
                     })
             }
         })
